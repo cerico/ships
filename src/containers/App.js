@@ -16,7 +16,9 @@ class App extends React.Component  {
 
   return (
     <Router>
-       <div> 
+
+
+      <main>
   
           <Route component={Ships}/>
           <div>
@@ -26,7 +28,8 @@ class App extends React.Component  {
             </Switch>
           </div>
 
-        </div>
+        </main>
+
     </Router>
   );
 }

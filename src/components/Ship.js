@@ -5,7 +5,7 @@ const classNames = require('classnames');
 class Ship extends React.Component  {
 
   render (){
-    return <div>ship</div>
+    return (<div>ship</div>)
   }
 }
 
