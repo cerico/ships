@@ -3,6 +3,8 @@ var express = require('express');
 
 var app = express();
 
+var port=9002
+
 app.get('/bundle/bundle.js', function(req,res){
   res.sendFile(path.join(__dirname, 'dist', 'bundle', 'bundle.js'));
 })
@@ -15,12 +17,12 @@ app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
-app.listen(7770, 'localhost', function(err) {
+app.listen(port, 'localhost', function(err) {
   if (err) {
     console.log(err);
     return;
   }
 
-  console.log('Listening at http://localhost:7770');
+  console.log('Listening at ' + port);
 });
  
