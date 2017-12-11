@@ -1,12 +1,12 @@
 {
-  "name": "ships",
-  "version": "1.0.0",
-  "description": "shipping",
-  "main": "server.js",
-  "dependencies": {
-    "express": "^4.16.2"
+  "scripts": {
+    "dev": "webpack-dev-server --config webpack/dev.config.js",
+    "build": "webpack --config webpack/prod.config.js && npm run copy",
+    "copy": "cp -r src/index.html dist && cp -r public dist",
+    "start": "node server.js",
+    "deploy": "./bin/deploy.sh"
   },
-  "devDependencies": {
+  "dependencies": {
     "autoprefixer": "7.1.2",
     "babel-core": "6.25.0",
     "babel-eslint": "7.2.3",
@@ -61,18 +61,5 @@
     "webpack-manifest-plugin": "1.2.1",
     "webpack-merge": "^4.1.1",
     "whatwg-fetch": "2.0.3"
-  },
-  "scripts": {
-    "dev": "webpack-dev-server --config webpack/dev.config.js",
-    "build": "webpack --config webpack/prod.config.js && npm run copy",
-    "copy": "cp -r src/index.html dist && cp -r public dist",
-    "start": "node server.js",
-    "deploy": "./bin/deploy.sh"
-  },
-  "repository": {
-    "type": "git",
-    "url": "http://www.gitub.com/cerico/ships.git"
-  },
-  "author": "garethrobertlee",
-  "license": "ISC"
+  }
 }
