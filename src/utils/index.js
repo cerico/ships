@@ -8,6 +8,7 @@ export const getCountry = (owner) => {
 
 export const getImage = (id) => {
   const IMG_URL = window.location.host
-  const image = `http://${IMG_URL}/public/ship1.jpg`
+  const number = parseInt(Math.random()*2)+1
+  const image = `http://${IMG_URL}/public/ship${number}.jpg`
   return image
 }
