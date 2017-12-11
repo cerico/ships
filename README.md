@@ -2,6 +2,8 @@
 
 ## Setup
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/cerico/ships.svg)](https://greenkeeper.io/)
+
 Should run with all modern versions of node. 
 
 ```
