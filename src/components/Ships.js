@@ -23,7 +23,7 @@ class Ships extends React.Component  {
     return(
       <div className={styles.grid} style={style.general}>
         {this.props.ships.length > 0 ? 
-          this.props.ships.map((ship, index) => 
+          this.props.ships.map((ship, index) =>
             <ShipItem ship={ship} key={index}/>) 
           : null
         }
