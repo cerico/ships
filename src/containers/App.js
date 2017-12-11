@@ -9,17 +9,19 @@ const classNames = require('classnames');
 
 import Ship from '../components/Ship';
 import Ships from '../components/Ships';
+import { getShips } from '../actions/ships';
 
 class App extends React.Component  {
+
+  componentWillMount () {
+    this.props.getShips()
+  }
   
   render(){
 
-  return (
-    <Router>
-
-
-      <main>
-  
+    return (
+      <Router>
+        <main>
           <Route component={Ships}/>
           <div>
             <Switch>
@@ -27,12 +29,10 @@ class App extends React.Component  {
               <Route path="/ships/:id" component={Ship} />
             </Switch>
           </div>
-
         </main>
-
-    </Router>
-  );
-}
+      </Router>
+    );
+  }
 }
 
 const mapStateToProps = (state) => {
@@ -41,5 +41,5 @@ const mapStateToProps = (state) => {
     })
 }
 
-export default connect(mapStateToProps, null)(App);
+export default connect(mapStateToProps, {getShips})(App);
 
