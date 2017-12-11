@@ -3,7 +3,7 @@ var express = require('express');
 
 var app = express();
 
-app.get('/two/bundle.js', function(req,res){
+app.get('/bundle/bundle.js', function(req,res){
   res.sendFile(path.join(__dirname, 'dist', 'bundle', 'bundle.js'));
 })
 
