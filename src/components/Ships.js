@@ -7,9 +7,21 @@ import ShipItem from './ShipItem';
 
 class Ships extends React.Component  {
 
+  
+
   render (){
+    let display
+    this.props.location.pathname === '/' ?
+      display = 'flex' :
+      display = 'none'
+    
+    const style = {
+      general: {
+        display: display
+      }
+    }
     return(
-      <div className={styles.grid}>
+      <div className={styles.grid} style={style.general}>
         {this.props.ships.length > 0 ? 
           this.props.ships.map((ship, index) => 
             <ShipItem ship={ship} key={index}/>) 
